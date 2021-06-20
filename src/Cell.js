@@ -1,18 +1,22 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from '@emotion/react';
-import Grid from './Grid';
-function App() {
+
+const Cell = ({ children }) => {
     return (
         <div
             css={css`
                 display: flex;
                 justify-content: center;
+                align-items: center;
+                &:hover {
+                    background-color: lightgreen;
+                }
             `}
         >
-            <Grid />
+            {children}
         </div>
     );
-}
+};
 
-export default App;
+export default Cell;
